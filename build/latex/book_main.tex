@@ -1,0 +1,63 @@
+\documentclass[
+  final,
+  pagePreset=tallpage,
+  babelLanguage=slovene,
+]{anecdote}
+
+\usepackage{mylayout}
+
+%% Details of the book
+%% ===================
+
+\title{Atthakavagga}
+\subtitle{}
+\author{The Author}
+\date{2014-11-27}
+\editionInfo{}
+\ISBN{000-0-0000000-0-0}
+
+%% === Load further packages ===
+
+\usepackage{lipsum}
+
+%% === Hyphenation exceptions and corrections ===
+
+% \hyphenation{}
+
+\begin{document}
+
+
+\frontmatter
+
+\cleartorecto
+\tableofcontents*
+
+% Preface
+%\input{../.././manuscript/tex/preface.tex}
+
+% Introduction
+\input{../.././manuscript/tex/introduction.tex}
+
+\mainmatter
+
+% TODO
+%\book{\thetitle}
+
+% Kāma Sutta
+\input{../.././manuscript/tex/kama.tex}
+
+% Guhaṭṭaka Sutta
+\input{../.././manuscript/tex/guhattaka.tex}
+
+%\appendix
+%
+%% Further Comments
+%\input{chapters/further-comments.tex}
+%
+%\backmatter
+%
+%% Glossary
+%\input{../.././manuscript/tex/glossary.tex}
+
+
+\end{document}

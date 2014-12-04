@@ -1,0 +1,74 @@
+\ProvidesPackage{mylayout}
+
+\graphicspath{{../../images/}}
+
+\def\gobble@spaces{\@ifnextchar\space{\@gobble\gobble@spaces}{}}
+\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
+
+\newcommand\chapterMainTitleFmt[2]{%
+  % TODO: a linespace creeps in somehow before the first image
+  \vskip -\baselineskip
+  {\centering
+  \begin{tikzpicture}
+    \node (spacer) [minimum height=30mm, below=0pt of current bounding box.north, anchor=north] {};
+    \node [below=0pt of current bounding box.north, anchor=north]
+    {\includegraphics[scale=0.3]{#1}};
+    \node [below=20mm of current bounding box.north, anchor=mid]
+    {\includegraphics[scale=0.2]{#2}};
+  \end{tikzpicture}%
+  \par}%
+}
+
+\newcommand\chapterFrontTitleFmt[1]{%
+  % TODO: a linespace creeps in somehow before the first image
+  \vskip -\baselineskip
+  \begin{tikzpicture}
+    \node (spacer) [minimum height=23mm, below=0pt of current bounding box.north, anchor=north] {};
+    \node [below right=5mm and 5.5pc of current bounding box.north west, anchor=north west]
+    {\includegraphics[scale=0.3]{#1}};
+  \end{tikzpicture}%
+}
+
+\makechapterstyle{calligraphy-main}{
+  \chapterstyle{default}
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{0pt}
+  \setlength{\afterchapskip}{0pt}
+  \renewcommand\printchaptername{}
+  \renewcommand\chapternamenum{}
+  \renewcommand\printchapternum{}
+  \renewcommand\afterchapternum{}
+  \renewcommand\printchapternonum{}
+  \renewcommand\printchaptertitle[1]{\chapterMainTitleFmt ##1}
+}
+
+\makechapterstyle{calligraphy-front}{
+  \chapterstyle{default}
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{0pt}
+  \setlength{\afterchapskip}{0pt}
+  \renewcommand\printchaptername{}
+  \renewcommand\chapternamenum{}
+  \renewcommand\printchapternum{}
+  \renewcommand\afterchapternum{}
+  \renewcommand\printchapternonum{}
+  \renewcommand\printchaptertitle[1]{\chapterFrontTitleFmt{##1}}
+}
+
+\renewcommand\frontmatterChapterStyle{\chapterstyle{calligraphy-front}}
+\renewcommand\mainmatterChapterStyle{\chapterstyle{calligraphy-main}}
+
+\newlength\vh
+\setlength{\vh}{\heightof{\includegraphics[scale=0.3]{v-first-2-gray.png}}}
+
+\newcommand{\vFirst}{%
+  \marginpar{%
+    \vskip -\marginparpush
+    \vskip -2.5pt
+    \vskip \vh
+    \includegraphics[scale=0.3]{v-first-2-gray.png}%
+  }%
+}
+
+\setlength{\vleftmargin}{0pt}
+
