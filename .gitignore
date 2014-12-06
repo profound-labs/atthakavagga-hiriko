@@ -2,4 +2,5 @@
 *.aux
 *.log
 *.toc
+publish/preview
 build/latex/book_main.pdf

@@ -109,12 +109,11 @@
 \newcommand\chapterNoteFont{}
 \newcommand\sectionFont{}
 
-%\setmainfont{Simonetta}
-\setmainfont{Crimson Roman}
+\setmainfont{Simonetta X}
 
-\newfontfamily\oldNumFont[
-  Numbers = OldStyle,
-]{Crimson Roman}
+%\newfontfamily\oldNumFont[
+%  Numbers = OldStyle,
+%]{Crimson Roman}
 
 \newcommand{\footSize}
   {\@setfontsize\footSize{9}{9}}
@@ -130,9 +129,9 @@
 %\newfontfamily\chapterTitleFont{Cinzel Decorative}
 %\newfontfamily\chapterNumberFont{Cinzel Decorative}
 
-\newfontfamily\chapterNameFont{Crimson Roman}
-\newfontfamily\chapterTitleFont{Crimson Roman}
-\newfontfamily\chapterNumberFont{Crimson Roman}
+\newfontfamily\chapterNameFont{Simonetta X}
+\newfontfamily\chapterTitleFont{Simonetta X}
+\newfontfamily\chapterNumberFont{Simonetta X}
 
 %\newfontfamily\chapterAuthorFont{Crimson Roman}
 %\newfontfamily\chapterNoteFont[

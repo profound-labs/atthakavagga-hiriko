@@ -3,7 +3,8 @@
 \graphicspath{{../../images/}}
 
 \def\gobble@spaces{\@ifnextchar\space{\@gobble\gobble@spaces}{}}
-\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
+%\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
+\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-6pt}\footSize #1.}\gobble@spaces}
 
 \newcommand\chapterMainTitleFmt[2]{%
   % TODO: a linespace creeps in somehow before the first image
