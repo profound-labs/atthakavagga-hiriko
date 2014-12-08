@@ -109,7 +109,11 @@
 \newcommand\chapterNoteFont{}
 \newcommand\sectionFont{}
 
-\setmainfont{Simonetta X}
+\setmainfont[
+  ItalicFont = Simonetta X Italic,
+  BoldFont = Simonetta X Black,
+  BoldItalicFont = Simonetta X Black Italic,
+]{Simonetta X}
 
 %\newfontfamily\oldNumFont[
 %  Numbers = OldStyle,
