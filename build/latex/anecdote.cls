@@ -1125,7 +1125,7 @@ philo-sophical munindo amaravati thai-land}
 
   % === normalsize ===
 
-  \def\BOOK@apt{11}
+  \def\BOOK@apt{10.5}
   \def\BOOK@bpt{16}
 
   \renewcommand{\normalsize}{%
@@ -1153,8 +1153,8 @@ philo-sophical munindo amaravati thai-land}
   \settrimmedsize{\stockheight}{\stockwidth}{*}
   \settrims{0pt}{0pt}
 
-  \settypeblocksize{28\baselineskip + \topskip}{90mm}{*}
-  \setlrmargins{16mm}{*}{*}% Left is as with 1.618
+  \settypeblocksize{28\baselineskip + \topskip}{85mm}{*}
+  \setlrmargins{18mm}{*}{*}
   \setulmargins{27.5mm}{*}{*}% Keeping top same as with 1.618 ratio
   % TODO: is this needed?
   %\setlength{\footskip}{3\baselineskip}
