@@ -109,11 +109,7 @@
 \newcommand\chapterNoteFont{}
 \newcommand\sectionFont{}
 
-\setmainfont[
-  ItalicFont = Simonetta X Italic,
-  BoldFont = Simonetta X Black,
-  BoldItalicFont = Simonetta X Black Italic,
-]{Simonetta X}
+\setmainfont{Alegreya}
 
 %\newfontfamily\oldNumFont[
 %  Numbers = OldStyle,
@@ -129,19 +125,20 @@
 %  %Renderer = Basic,
 %]{Crimson Roman}
 
-%\newfontfamily\chapterNameFont{Cinzel Decorative}
-%\newfontfamily\chapterTitleFont{Cinzel Decorative}
-%\newfontfamily\chapterNumberFont{Cinzel Decorative}
-
-\newfontfamily\chapterNameFont{Simonetta X}
-\newfontfamily\chapterTitleFont{Simonetta X}
-\newfontfamily\chapterNumberFont{Simonetta X}
+\newfontfamily\chapterNameFont{Rosarivo}
+\newfontfamily\chapterTitleFont{Rosarivo}
+\newfontfamily\chapterNumberFont{Rosarivo}
 
 %\newfontfamily\chapterAuthorFont{Crimson Roman}
 %\newfontfamily\chapterNoteFont[
 %  BoldFont = Crimson Semibold,
 %  ItalicFont = Crimson Italic,
 %]{Crimson Roman}
+
+\newfontfamily\dropCapFont{Cinzel Decorative Bold}
+
+\newcommand{\dropCapSize}
+  {\@setfontsize\dropCapSize{32}{32}}
 
 % Some default font sizes, use \renewcommand to adjust
 
@@ -150,7 +147,7 @@
 \newcommand{\chapterNumberSize}
   {\@setfontsize\chapterNumberSize{22}{24}}
 \newcommand{\chapterTitleSize}
-  {\@setfontsize\chapterTitleSize{13}{16.5}}
+  {\@setfontsize\chapterTitleSize{12}{12}}
 \newcommand{\chapterAuthorSize}
   {\@setfontsize\chapterAuthorSize{12}{14}}
 \newcommand{\chapterNoteSize}

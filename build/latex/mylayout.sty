@@ -1,75 +1,72 @@
 \ProvidesPackage{mylayout}
 
+\openany
+
 \graphicspath{{../../images/}}
 
 \def\gobble@spaces{\@ifnextchar\space{\@gobble\gobble@spaces}{}}
 %\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
 \newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-6pt}\footSize #1.}\gobble@spaces}
 
-\newcommand\chapterMainTitleFmt[2]{%
-  % TODO: a linespace creeps in somehow before the first image
-  \vskip -\baselineskip
-  {\centering
-  \begin{tikzpicture}
-    \node (spacer) [minimum height=30mm, below=0pt of current bounding box.north, anchor=north] {};
-    \node [below=0pt of current bounding box.north, anchor=north]
-    {\includegraphics[scale=0.3]{#1}};
-    \node [below=20mm of current bounding box.north, anchor=mid]
-    {\includegraphics[scale=0.2]{#2}};
-  \end{tikzpicture}%
-  \par}%
-}
-
-\newcommand\chapterFrontTitleFmt[1]{%
-  % TODO: a linespace creeps in somehow before the first image
-  \vskip -\baselineskip
-  \begin{tikzpicture}
-    \node (spacer) [minimum height=23mm, below=0pt of current bounding box.north, anchor=north] {};
-    \node [below right=5mm and 5.5pc of current bounding box.north west, anchor=north west]
-    {\includegraphics[scale=0.3]{#1}};
-  \end{tikzpicture}%
-}
-
-\makechapterstyle{calligraphy-main}{
+\makechapterstyle{diamond}{
   \chapterstyle{default}
   \setlength{\beforechapskip}{0pt}
   \setlength{\midchapskip}{0pt}
-  \setlength{\afterchapskip}{0pt}
+  \setlength{\afterchapskip}{2.5\onelineskip}
   \renewcommand\printchaptername{}
-  \renewcommand\chapternamenum{}
   \renewcommand\printchapternum{}
-  \renewcommand\afterchapternum{}
   \renewcommand\printchapternonum{}
-  \renewcommand\printchaptertitle[1]{\chapterMainTitleFmt ##1}
+  \renewcommand\chaptitlefont{\chapterTitleFont\chapterTitleSize}
+  \renewcommand*\printchaptertitle[1]{%
+    \begin{tikzpicture}
+      \node (rulebox) [
+        rectangle, draw=none, fill=none,
+        minimum width=\linewidth,
+      ] {};
+      \draw [line width=0.4pt, color=black!80] (rulebox.west) -- (rulebox.east);
+      \node (diamond) [
+        above=-0.7pt of rulebox.mid,
+        anchor=mid,
+        rectangle, fill=black!80,
+        minimum width=2pt,
+        minimum height=2pt,
+        rotate=45,
+      ] {};
+      \node (title) [
+        above=32pt of rulebox.mid,
+        anchor=north,
+      ] {\begin{minipage}{\linewidth}%
+        \centering\chaptitlefont\color{chaptertitle}%
+        \textls*{\MakeUppercase{##1}}%
+      \end{minipage}};
+    \end{tikzpicture}%
+  }
 }
 
-\makechapterstyle{calligraphy-front}{
-  \chapterstyle{default}
-  \setlength{\beforechapskip}{0pt}
-  \setlength{\midchapskip}{0pt}
-  \setlength{\afterchapskip}{0pt}
-  \renewcommand\printchaptername{}
-  \renewcommand\chapternamenum{}
-  \renewcommand\printchapternum{}
-  \renewcommand\afterchapternum{}
-  \renewcommand\printchapternonum{}
-  \renewcommand\printchaptertitle[1]{\chapterFrontTitleFmt{##1}}
+\renewcommand\mainmatterChapterStyle{\chapterstyle{diamond}}
+
+\newlength\capFrameHeight
+\setlength{\capFrameHeight}{3.5\baselineskip}
+
+\newlength\capIndent
+\setlength{\capIndent}{\capFrameHeight + 3pt}
+
+\newcommand{\dropCap}[1]{%
+\noindent
+\hbox{\begin{tikzpicture}
+  \node (cap) [rectangle, draw=black!40, inner sep=0pt, line width=0.4pt,] {%
+    \begin{minipage}[b][\capFrameHeight][c]{\capFrameHeight}%
+      %\vskip -\baselineskip
+      \centering\dropCapFont\dropCapSize #1\par
+    \end{minipage}%
+  };
+\end{tikzpicture}}%
+\par
+\vskip -0.8pt
+\vskip -2\baselineskip
+\vskip -\parskip
+\noindent
+\hangindent=\capIndent
+\hangafter=-2
 }
-
-\renewcommand\frontmatterChapterStyle{\chapterstyle{calligraphy-front}}
-\renewcommand\mainmatterChapterStyle{\chapterstyle{calligraphy-main}}
-
-\newlength\vh
-\setlength{\vh}{\heightof{\includegraphics[scale=0.3]{v-first-2-gray.png}}}
-
-\newcommand{\vFirst}{%
-  \marginpar{%
-    \vskip -\marginparpush
-    \vskip -2.5pt
-    \vskip \vh
-    \includegraphics[scale=0.3]{v-first-2-gray.png}%
-  }%
-}
-
-\setlength{\vleftmargin}{0pt}
 
