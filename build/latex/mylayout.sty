@@ -8,9 +8,11 @@
 %\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
 \newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-6pt}\footSize #1.}\gobble@spaces}
 
+\setlength{\vleftmargin}{0pt}
+
 \makechapterstyle{diamond}{
   \chapterstyle{default}
-  \setlength{\beforechapskip}{0pt}
+  \setlength{\beforechapskip}{-11.5mm}
   \setlength{\midchapskip}{0pt}
   \setlength{\afterchapskip}{2.5\onelineskip}
   \renewcommand\printchaptername{}
@@ -46,27 +48,42 @@
 \renewcommand\mainmatterChapterStyle{\chapterstyle{diamond}}
 
 \newlength\capFrameHeight
-\setlength{\capFrameHeight}{3.5\baselineskip}
+\setlength{\capFrameHeight}{2\baselineskip + \heightof{\dropCapFont\dropCapSize O}}
 
 \newlength\capIndent
 \setlength{\capIndent}{\capFrameHeight + 3pt}
 
-\newcommand{\dropCap}[1]{%
-\noindent
-\hbox{\begin{tikzpicture}
-  \node (cap) [rectangle, draw=black!40, inner sep=0pt, line width=0.4pt,] {%
-    \begin{minipage}[b][\capFrameHeight][c]{\capFrameHeight}%
-      %\vskip -\baselineskip
-      \centering\dropCapFont\dropCapSize #1\par
-    \end{minipage}%
-  };
-\end{tikzpicture}}%
-\par
-\vskip -0.8pt
-\vskip -2\baselineskip
-\vskip -\parskip
-\noindent
-\hangindent=\capIndent
-\hangafter=-2
+\newlength\anteW
+
+\newcommand{\dropCap}[2][]{%
+  \noindent
+  \def\tempa{}%
+  \def\tempb{#1}%
+  \ifx\tempa\tempb\relax
+  \else
+    \setlength{\anteW}{\widthof{\dropCapFont\dropCapSize #1}}%
+    \hskip -\anteW
+    \hbox{%
+      \begin{minipage}[b][\capFrameHeight][b]{\anteW}%
+        \raisebox{\baselineskip}{\dropCapFont\dropCapSize #1}%
+      \end{minipage}%
+    }%
+  \fi
+  \hbox{\begin{tikzpicture}
+    \node (cap) [rectangle, draw=black!40, inner sep=0pt, line width=0.4pt,] {%
+      \begin{minipage}[b][\capFrameHeight][b]{\capFrameHeight}%
+        \centering
+        \raisebox{\baselineskip}{\dropCapFont\dropCapSize\MakeUppercase{#2}}%
+        \par
+      \end{minipage}%
+    };
+  \end{tikzpicture}}%
+  \par
+  \vskip -0.8pt
+  \vskip -2\baselineskip
+  \vskip -\parskip
+  \noindent
+  \hangindent=\capIndent
+  \hangafter=-2%
 }
 

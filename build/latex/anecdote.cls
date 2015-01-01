@@ -1150,7 +1150,7 @@ philo-sophical munindo amaravati thai-land}
   \settrimmedsize{\stockheight}{\stockwidth}{*}
   \settrims{0pt}{0pt}
 
-  \settypeblocksize{28\baselineskip + \topskip}{85mm}{*}
+  \settypeblocksize{26\baselineskip + \topskip}{90mm}{*}
   \setlrmargins{18mm}{*}{*}
   \setulmargins{27.5mm}{*}{*}% Keeping top same as with 1.618 ratio
   % TODO: is this needed?
