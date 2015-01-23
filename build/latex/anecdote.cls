@@ -108,8 +108,14 @@
 \newcommand\chapterAuthorFont{}
 \newcommand\chapterNoteFont{}
 \newcommand\sectionFont{}
+\newcommand\tocFont{}
+\newcommand\tocFontOldNum{}
 
-\setmainfont{Alegreya}
+\setmainfont[
+  ItalicFont = Alegreya X Italic,
+  BoldFont = Alegreya X Bold,
+  BoldItalicFont = Alegreya X Bold Italic,
+]{Alegreya X}
 
 %\newfontfamily\oldNumFont[
 %  Numbers = OldStyle,
@@ -125,15 +131,20 @@
 %  %Renderer = Basic,
 %]{Crimson Roman}
 
-\newfontfamily\chapterNameFont{Rosarivo}
-\newfontfamily\chapterTitleFont{Rosarivo}
-\newfontfamily\chapterNumberFont{Rosarivo}
+\newfontfamily\chapterNameFont{Rosarivo X}
+\newfontfamily\chapterTitleFont{Rosarivo X}
+\newfontfamily\chapterNumberFont[Numbers = Lining]{Alegreya X}
 
 %\newfontfamily\chapterAuthorFont{Crimson Roman}
 %\newfontfamily\chapterNoteFont[
 %  BoldFont = Crimson Semibold,
 %  ItalicFont = Crimson Italic,
 %]{Crimson Roman}
+
+\newfontfamily\AlegreyaFont[
+  ItalicFont = Alegreya X Italic,
+]{Alegreya X}
+\newfontfamily\RosarivoFont{Rosarivo X}
 
 \newfontfamily\dropCapFont{Cinzel Decorative Bold}
 
@@ -358,6 +369,11 @@ philo-sophical munindo amaravati thai-land}
   \setcounter{chapter}{0}%
 }
 
+\addtodef{\appendix}{}{%
+  \addtocontents{toc}{\addvspace{18pt}}%
+  \bookmarksetup{startatroot}%
+}
+
 \addtodef{\backmatter}{}{%
   \addtocontents{toc}{\addvspace{18pt}}%
   \bookmarksetup{startatroot}%
@@ -492,7 +508,7 @@ philo-sophical munindo amaravati thai-land}
 
 \titlecontents{part}[\tocLeftWidth]
 {\addvspace{20pt}%
-\normalsize\crimsonRomanFont}%
+\normalsize\tocFont}%
 {%
   \contentsmargin{0pt}%
   \makebox[0pt][r]{%
@@ -500,48 +516,48 @@ philo-sophical munindo amaravati thai-land}
   \hspace*{0.5em}$\cdot$\hspace*{0.5em}}%
 }
 {\contentsmargin{0pt}}
-{\hfill\normalsize\crimsonRomanFont\thecontentspage}
+{\hfill\normalsize\tocFont\thecontentspage}
 [\addvspace{5pt}]
 
 \titlecontents{chapter}[\tocLeftWidth]
-{\normalsize\crimsonRomanFont}%
+{\normalsize\tocFont}%
 {%
   \contentsmargin{0pt}%
   \makebox[0pt][r]{%
     {\color{tocleftside}%
-    \chaptername~{\crimsonRomanFontOldNum\thecontentslabel}}%
+    \tocFontOldNum\thecontentslabel}%
     \hspace*{0.5em}$\cdot$\hspace*{0.5em}%
   }%
 }
 {\contentsmargin{0pt}%
 \itshape}
-{\enspace\hfill\normalsize\crimsonRomanFont\thecontentspage}
+{\enspace\hfill\normalsize\tocFont\thecontentspage}
 [\addvspace{5pt}]
 
 \titlecontents{appendix}[\tocLeftWidth]
-{\normalsize\crimsonRomanFont}%
+{\normalsize\tocFont}%
 {%
   \contentsmargin{0pt}%
   \makebox[0pt][r]{%
     {\color{tocleftside}%
-    \appendixname~{\crimsonRomanFontOldNum\thecontentslabel}}%
+    \tocFontOldNum\thecontentslabel}%
     \hspace*{0.5em}$\cdot$\hspace*{0.5em}%
   }%
 }
 {\contentsmargin{0pt}%
 \itshape}
-{\hfill\normalsize\crimsonRomanFont\thecontentspage}
+{\hfill\normalsize\tocFont\thecontentspage}
 
 \titlecontents{section}[\tocLeftWidth]
 {\addvspace{-2pt}%
-\small\crimsonRomanFont}
+\small\tocFont}
 {\contentslabel[\thecontentslabel]{\tocLeftWidth}}
 {}
-{\hfill\normalsize\crimsonRomanFont\thecontentspage}
+{\hfill\normalsize\tocFont\thecontentspage}
 
 \titlecontents*{subsection}[\tocLeftWidth]
 {\addvspace{-1pt}%
-\small\crimsonRomanFont}
+\small\tocFont}
 {}
 {}
 {\ --- \thecontentspage}
@@ -1150,7 +1166,7 @@ philo-sophical munindo amaravati thai-land}
   \settrimmedsize{\stockheight}{\stockwidth}{*}
   \settrims{0pt}{0pt}
 
-  \settypeblocksize{26\baselineskip + \topskip}{90mm}{*}
+  \settypeblocksize{26.5\baselineskip + \topskip}{90mm}{*}
   \setlrmargins{18mm}{*}{*}
   \setulmargins{27.5mm}{*}{*}% Keeping top same as with 1.618 ratio
   % TODO: is this needed?

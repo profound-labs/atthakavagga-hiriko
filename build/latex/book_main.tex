@@ -26,25 +26,33 @@
 
 \begin{document}
 
-
 \frontmatter
+
+% TODO
+\input{../../manuscript/tex/titlepage.tex}
+
+% TODO
+\input{../../manuscript/tex/copyright.tex}
 
 \cleartorecto
 \tableofcontents*
 
-%% Preface
-%%\input{../../manuscript/tex/preface.tex}
-%
-%% Introduction
-%\input{../../manuscript/tex/introduction.tex}
+% Introduction
+\input{../../manuscript/tex/introduction.tex}
 
 \mainmatter
 
-% TODO
 %\book{\thetitle}
 
-\setlength{\parskip}{1.5em}
-\setlength{\parindent}{0pt}
+\cleartorecto
+\part{AṬṬHAKAVAGGA}
+
+%\thispagestyle{empty}
+%\vspace*{5em}
+%
+%{\centering
+%\chapterTitleFont\chapterTitleSize\color{chaptertitle}\textls*{\MakeUppercase{\thetitle}}
+%\par}
 
 \input{../../manuscript/tex/kama.tex}
 \input{../../manuscript/tex/guhattaka.tex}
@@ -65,15 +73,29 @@
 
 \appendix
 
-% Appendix
-%\input{../.././manuscript/tex/appendix.tex}
+% \appendixpage
+\cleartorecto
 
-\backmatter
+\part{DODATEK}
+
+%\thispagestyle{empty}
+%\vspace*{5em}
+%
+%{\centering
+%\chapterTitleFont\chapterTitleSize\color{chaptertitle}\textls*{\MakeUppercase{Razalge}}
+%\par}
+
+% Appendix
+\input{../.././manuscript/tex/appendix.tex}
+
+%\backmatter
 
 %% Glossary
 %\input{../.././manuscript/tex/glossary.tex}
 
 % Accent Check
-\input{../../manuscript/tex/accent-check.tex}
+%\input{../../manuscript/tex/accent-check.tex}
+
+\newpage\thispagestyle{empty}\mbox{}
 
 \end{document}

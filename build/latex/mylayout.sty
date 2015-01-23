@@ -1,14 +1,70 @@
 \ProvidesPackage{mylayout}
 
-\openany
-
 \graphicspath{{../../images/}}
+
+\definecolor{chapternum}{gray}{0.3}
+\definecolor{chaptertitle}{gray}{0.3}
+\definecolor{section}{gray}{0.3}
+\definecolor{subsection}{gray}{0.4}
+\definecolor{desclabel}{gray}{0.2}
+
+\maxtocdepth{chapter}
 
 \def\gobble@spaces{\@ifnextchar\space{\@gobble\gobble@spaces}{}}
 %\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-0.5\marginparpush}\vspace*{1.2pt}\oldNumFont #1.}\gobble@spaces}
-\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-6pt}\footSize #1.}\gobble@spaces}
+\newcommand{\verseref}[1]{\mbox{}\marginpar{\vspace*{-6pt}\hspace*{10pt}\footSize #1.}\gobble@spaces}
 
-\setlength{\vleftmargin}{0pt}
+\newcommand\mainmatterChapter{%
+  \ifartopt\par\@nameuse{chapterblock}\else
+    \clearforchapter
+    \thispagestyle{chapter}
+    \global\@topnum\z@
+  \fi
+  \m@mindentafterchapter
+  \@ifstar{%
+    \addtocounter{chapter}{1}%
+    \@m@mschapter%
+  }{%
+    \addtocounter{chapter}{-1}%
+    \@m@mchapter%
+  }%
+}
+
+\renewcommand{\chapterNumberSize}
+  {\@setfontsize\chapterNumberSize{15}{15}}
+
+\addtodef{\fronmatter}{}{%
+  \openright
+}
+
+\newcommand\oldChapter{}
+
+\addtodef{\mainmatter}{}{%
+  \makeatletter
+  \let\oldChapter\chapter
+  \let\chapter\mainmatterChapter
+  \openany
+  \setlength{\parskip}{1.5em}
+  \setlength{\parindent}{0pt}
+  \makeatother
+}
+
+\addtodef{\appendix}{}{%
+  \makeatletter
+  \let\chapter\oldChapter
+  \openright
+  \setlength{\parskip}{0pt}
+  \setlength{\parindent}{15pt}
+  \makeatother
+}
+
+\titlecontents{part}[\tocLeftWidth]
+{%\addvspace{20pt}%
+\normalsize\tocFont}%
+{\contentsmargin{0pt}\lsstyle\color{chaptertitle}}
+{\contentsmargin{0pt}}
+{\hfill\normalsize\tocFont\thecontentspage}
+[\addvspace{10pt}]
 
 \makechapterstyle{diamond}{
   \chapterstyle{default}
@@ -41,11 +97,40 @@
         \centering\chaptitlefont\color{chaptertitle}%
         \textls*{\MakeUppercase{##1}}%
       \end{minipage}};
+      \node (number) [
+        above=64pt of rulebox.mid,
+        anchor=north,
+      ] {\begin{minipage}{\linewidth}%
+        \centering\chapterNumberFont\chapterNumberSize\color{chapternum}%
+        \thechapter%
+      \end{minipage}};
     \end{tikzpicture}%
   }
 }
 
+\makechapterstyle{frontmatter}{
+  \chapterstyle{lowtitle}
+  \setlength{\beforechapskip}{3\onelineskip}
+  \setlength{\chapterTitleLeftSkip}{6pc}
+}
+
+\makechapterstyle{appendix}{
+  \chapterstyle{lowtitle}
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\chapterTitleLeftSkip}{2pc}
+  \renewcommand\printchapternum{%
+    \chapnumfont\color{chapternum}%
+    \hspace*{\chapterTitleLeftSkip}\appendixname\space\thechapter%
+  }
+}
+
+\setsubsecheadstyle{%
+  \sectionFont\normalsize\bfseries\color{subsection}\memRTLraggedright%
+}
+
+\renewcommand\frontmatterChapterStyle{\chapterstyle{frontmatter}}
 \renewcommand\mainmatterChapterStyle{\chapterstyle{diamond}}
+\renewcommand\appendixChapterStyle{\chapterstyle{appendix}}
 
 \newlength\capFrameHeight
 \setlength{\capFrameHeight}{2\baselineskip + \heightof{\dropCapFont\dropCapSize O}}
@@ -87,3 +172,31 @@
   \hangafter=-2%
 }
 
+\renewenvironment{description}%
+               {\list{}{\labelwidth\z@
+                        \leftmargin 17pt
+                        \itemindent-\leftmargin
+                        \let\makelabel\descriptionlabel}}%
+               {\endlist}
+\renewcommand*{\descriptionlabel}[1]{\hspace\labelsep\normalfont\color{desclabel}\bfseries #1}
+
+\long\def\@part[#1]#2{%
+  \M@gettitle{#1}%
+  \phantomsection
+  \ifnum \c@secnumdepth >-2\relax
+  \refstepcounter{part}%
+  \addcontentsline{toc}{part}%
+  {\protect\partnumberline{\thepart}#1}%
+  \mempartinfo{\thepart}{#1}{#2}%
+  \else
+  \addcontentsline{toc}{part}{#1}%
+  \mempartinfo{}{#1}{#2}%
+  \fi
+  \partmark{#1}%
+  {%
+    \centering%
+    \chapterTitleFont\chapterTitleSize\color{chaptertitle}\textls*{\MakeUppercase{#2}}%
+    \global\thisparthastitletrue%
+    \par%
+  }%
+\@endpart}
