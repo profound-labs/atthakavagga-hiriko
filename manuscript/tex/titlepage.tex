@@ -6,13 +6,36 @@
 
 {\centering
 
-\chapterTitleFont\chapterTitleSize\color{chaptertitle}\textls*{\MakeUppercase{\thetitle}}
+\resizebox{0.5\linewidth}{!}{%
+  \chapterTitleFont\chapterTitleSize\color{chaptertitle}%
+  \textls*{\MakeUppercase{Aṭṭhakavagga}}%
+}\\[12pt]
+\begin{tikzpicture}
+  \node (rulebox) [
+    rectangle, draw=none, fill=none,
+    minimum width=0.5\linewidth,
+  ] {};
+  \draw [line width=0.4pt, color=black!80] (rulebox.west) -- (rulebox.east);
+  \node (diamond) [
+    above=-0.7pt of rulebox.mid,
+    anchor=mid,
+    rectangle, fill=black!80,
+    minimum width=2pt,
+    minimum height=2pt,
+    rotate=45,
+  ] {};
+\end{tikzpicture}\\[12pt]
+zbirka osemverznih sutt
 
-\bigskip
-titlepage
+\vfill
 
+Buddha Gotama
 \bigskip
-TODO
+
+\emph{prevod:}\\
+Bhikkhu Hiriko
+
+\vspace*{4\onelineskip}
 
 }
 

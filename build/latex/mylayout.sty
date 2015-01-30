@@ -3,6 +3,7 @@
 \graphicspath{{../../images/}}
 
 \definecolor{chapternum}{gray}{0.3}
+\definecolor{appendixchapternum}{gray}{0.8}
 \definecolor{chaptertitle}{gray}{0.3}
 \definecolor{section}{gray}{0.3}
 \definecolor{subsection}{gray}{0.4}
@@ -32,6 +33,9 @@
 
 \renewcommand{\chapterNumberSize}
   {\@setfontsize\chapterNumberSize{15}{15}}
+
+\newcommand{\appendixChapterNumberSize}
+  {\@setfontsize\appendixChapterNumberSize{20}{20}}
 
 \addtodef{\fronmatter}{}{%
   \openright
@@ -119,8 +123,8 @@
   \setlength{\beforechapskip}{0pt}
   \setlength{\chapterTitleLeftSkip}{2pc}
   \renewcommand\printchapternum{%
-    \chapnumfont\color{chapternum}%
-    \hspace*{\chapterTitleLeftSkip}\appendixname\space\thechapter%
+    \chapterNumberFont\appendixChapterNumberSize\color{appendixchapternum}%
+    \hspace*{\chapterTitleLeftSkip}\thechapter%
   }
 }
 
