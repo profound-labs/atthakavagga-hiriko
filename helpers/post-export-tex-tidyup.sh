@@ -40,7 +40,6 @@ s/[[]1E41?[]]/ṁ/g;
 s/[[]1E43?[]]/ṃ/g;
 s/[[]1E0D?[]]/ḍ/g;
 s/[[]1E37?[]]/ḷ/g;' |\
-# TODO Replace non-breaking space and zero-width space.
 # Remove commands with empty braces
 sed -e 's/\\[a-zA-Z]\+[{] \+[}]/ /g' |\
 # Remove spaces from beginning and end of braces

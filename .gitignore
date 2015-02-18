@@ -2,5 +2,8 @@
 *.aux
 *.log
 *.toc
+publish/epub
+publish/mobi
+publish/pdf
 publish/preview
 build/latex/book_main.pdf

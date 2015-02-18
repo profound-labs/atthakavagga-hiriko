@@ -93,8 +93,6 @@
 
 % Dummy font commands to use system defaults instead of custom fonts
 
-% TODO: comment these out and define them below as \newfontfamily
-
 \newcommand\crimsonRomanFont{}
 \newcommand\crimsonRomanFontOldNum{}
 \newcommand\gentiumFont{}
@@ -189,8 +187,6 @@
 % === hyperref ===
 
 \RequirePackage{hyperref}
-
-% TODO: color the link if this is for the web
 
 \hypersetup{
   colorlinks=true,
@@ -795,10 +791,6 @@ philo-sophical munindo amaravati thai-land}
 
 % === Section styles ===
 
-% TODO: could use \makeheadstyles to keep bundle different chapter and
-% section style together. See memoir manual '6.9 Predefined heading
-% styles'.
-
 \raggedbottomsection
 
 \setbeforesecskip{-3.5ex \@plus -1ex \@minus -.2ex}
@@ -838,7 +830,6 @@ philo-sophical munindo amaravati thai-land}
   % T = 1.732 (sqrt(3)), Hexagon
 
   % For 11pt / 16pt font size, Gentium font, 5pt parskip, no parindent.
-  % TODO: elaborate on reasonale
 
   % === normalsize ===
 
@@ -1079,8 +1070,6 @@ philo-sophical munindo amaravati thai-land}
   % P = 1.5 (fifth)
   % T = 1.568181
 
-  % TODO: elaborate on style.
-
   % === normalsize ===
 
   \def\BOOK@apt{10.5}
@@ -1116,7 +1105,6 @@ philo-sophical munindo amaravati thai-land}
   % textwidth: 110mm
   % 1/1.568181 = 0.63768 ratio
 
-  % TODO: count lines in PDF
   % no parskip, so 32.5 lines
   %   = 487.5pt
   %   = 171.97917mm
@@ -1169,7 +1157,6 @@ philo-sophical munindo amaravati thai-land}
   \settypeblocksize{26.5\baselineskip + \topskip}{90mm}{*}
   \setlrmargins{18mm}{*}{*}
   \setulmargins{27.5mm}{*}{*}% Keeping top same as with 1.618 ratio
-  % TODO: is this needed?
   %\setlength{\footskip}{3\baselineskip}
 
 }{
