@@ -11,7 +11,7 @@ First edition
 
 ISBN for paperback: `978-1-78432-036-2`
 
-ISBN for ebooks: `000-0-000000-00-0`
+ISBN for ebooks: `978-1-78432-037-9`
 
 Find the final PDF, EPUB and MOBI files in the `publish/final/` folder.
 
