@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="urn:isbn:978-1-78432-037-9" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+
+    <!-- totalPageCount and maxPageNumber are mandatory, but they're not used in ebooks -->
+    <meta content="-1" name="dtb:totalPageCount"/>
+    <meta content="-1" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Atthakavagga</text>
+  </docTitle>
+  <navMap>
+    <navPoint id='nav1' playOrder='1'>
+<navLabel><text>Cover</text></navLabel>
+<content src='Text/cover.xhtml'/></navPoint>
+<navPoint id='nav2' playOrder='2'>
+<navLabel><text>Title Page</text></navLabel>
+<content src='Text/titlepage.xhtml'/></navPoint>
+<navPoint id='nav3' playOrder='3'>
+<navLabel><text>Contents</text></navLabel>
+<content src='Text/toc.xhtml'/></navPoint>
+<navPoint id='nav4' playOrder='4'>
+<navLabel><text>Spremna beseda prevajalca</text></navLabel>
+<content src='Text/introduction.xhtml'/></navPoint>
+<navPoint id='nav5' playOrder='5'>
+<navLabel><text>Učenje o čutnih užitkih</text></navLabel>
+<content src='Text/kama.xhtml'/></navPoint>
+<navPoint id='nav6' playOrder='6'>
+<navLabel><text>Učenje o votlini</text></navLabel>
+<content src='Text/guhattaka.xhtml'/></navPoint>
+<navPoint id='nav7' playOrder='7'>
+<navLabel><text>Učenje o nepoštenosti</text></navLabel>
+<content src='Text/dutthatthaka.xhtml'/></navPoint>
+<navPoint id='nav8' playOrder='8'>
+<navLabel><text>Učenje o čistosti</text></navLabel>
+<content src='Text/suddhatthaka.xhtml'/></navPoint>
+<navPoint id='nav9' playOrder='9'>
+<navLabel><text>Učenje o univerzalnosti</text></navLabel>
+<content src='Text/paramatthaka.xhtml'/></navPoint>
+<navPoint id='nav10' playOrder='10'>
+<navLabel><text>Učenje o starosti</text></navLabel>
+<content src='Text/jara.xhtml'/></navPoint>
+<navPoint id='nav11' playOrder='11'>
+<navLabel><text>Učenje Tissu Matteyi</text></navLabel>
+<content src='Text/tissametteyya.xhtml'/></navPoint>
+<navPoint id='nav12' playOrder='12'>
+<navLabel><text>Učenje Pasūri</text></navLabel>
+<content src='Text/pasura.xhtml'/></navPoint>
+<navPoint id='nav13' playOrder='13'>
+<navLabel><text>Učenje Māgaṇḍiyi</text></navLabel>
+<content src='Text/magandiya.xhtml'/></navPoint>
+<navPoint id='nav14' playOrder='14'>
+<navLabel><text>Učenje o pred razpadom</text></navLabel>
+<content src='Text/purabheda.xhtml'/></navPoint>
+<navPoint id='nav15' playOrder='15'>
+<navLabel><text>Učenje o prepirih in sporih</text></navLabel>
+<content src='Text/kalahavivada.xhtml'/></navPoint>
+<navPoint id='nav16' playOrder='16'>
+<navLabel><text>Kratko učenje o slepi ulici</text></navLabel>
+<content src='Text/culabyuha.xhtml'/></navPoint>
+<navPoint id='nav17' playOrder='17'>
+<navLabel><text>Daljše učenje o slepi ulici</text></navLabel>
+<content src='Text/mahabyuha.xhtml'/></navPoint>
+<navPoint id='nav18' playOrder='18'>
+<navLabel><text>Učenje o hitrosti</text></navLabel>
+<content src='Text/tuvataka.xhtml'/></navPoint>
+<navPoint id='nav19' playOrder='19'>
+<navLabel><text>Učenje o nasilju</text></navLabel>
+<content src='Text/attadanda.xhtml'/></navPoint>
+<navPoint id='nav20' playOrder='20'>
+<navLabel><text>Učenje Sāriputti</text></navLabel>
+<content src='Text/sariputta.xhtml'/></navPoint>
+<navPoint id='nav21' playOrder='21'>
+<navLabel><text>Zgodovina Aṭṭhakavagge</text></navLabel>
+<content src='Text/zgodovina.xhtml'/></navPoint>
+<navPoint id='nav22' playOrder='22'>
+<navLabel><text>Razlaga nekaterih izrazov</text></navLabel>
+<content src='Text/razlaga.xhtml'/></navPoint>
+<navPoint id='nav23' playOrder='23'>
+<navLabel><text>Sporočilo Aṭṭhakavagge</text></navLabel>
+<content src='Text/sporocilo.xhtml'/></navPoint>
+<navPoint id='nav24' playOrder='24'>
+<navLabel><text>Copyright</text></navLabel>
+<content src='Text/copyright.xhtml'/></navPoint>
+
+  </navMap>
+</ncx>

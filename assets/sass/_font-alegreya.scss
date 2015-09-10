@@ -1,0 +1,25 @@
+
+.font-alegreya {
+    font-family: 'Alegreya';
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../Fonts/AlegreyaX-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../Fonts/AlegreyaX-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../Fonts/AlegreyaX-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}

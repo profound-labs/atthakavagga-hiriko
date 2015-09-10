@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="AtthakavaggaBhikkhuHirikoBookId" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <!-- ISBN -->
+    <dc:identifier id="AtthakavaggaBhikkhuHirikoBookId" opf:scheme="ISBN">urn:isbn:978-1-78432-037-9</dc:identifier>
+    <!-- UUID generator: http://www.famkruithof.net/uuid/uuidgen -->
+    
+
+    <dc:title>Atthakavagga</dc:title>
+    
+    <dc:rights></dc:rights>
+    
+
+    <!-- BISAC Subject Headings List: https://www.bisg.org/bisac-subject-codes -->
+    <dc:subject>RELIGION / Buddhism / Theravada</dc:subject>
+
+    <dc:creator opf:file-as="Hiriko, Bhikkhu" opf:role="aut">Bhikkhu Hiriko</dc:creator>
+
+    <dc:source>http://www.fsbooks.org/</dc:source>
+
+    <!-- List of contributors
+
+         See: MARC Code List for Relators: http://www.loc.gov/marc/relators/relaterm.html
+
+         Examples:
+
+         * Editor [edt]
+           Use for a person or organization who prepares for publication a work not primarily his/her own,
+           such as by elucidating text, adding introductory or other critical matter, or technically directing
+           an editorial staff.
+
+         * Cover designer [cov]
+           Use for a person or organization responsible for the graphic design of a book cover,
+           album cover, slipcase, box, container, etc. For a person or organization responsible
+           for the graphic design of an entire book, use Book designer; for book jackets, use Bookjacket designer.
+
+         * Translator [trl]
+           Use for a person or organization who renders a text from one language into another, or from an older
+           form of a language into the modern form.
+
+         -->
+
+    
+    
+    
+    
+    <dc:contributor opf:file-as="Hiriko, Bhikkhu" opf:role="trl">Bhikkhu Hiriko</dc:contributor>
+    
+    
+    
+    <dc:contributor opf:file-as="Gambhiro, Bhikkhu" opf:role="bkd">Bhikkhu Gambhiro</dc:contributor>
+    
+    
+
+    <dc:publisher>Amaravati Publications</dc:publisher>
+    <dc:date opf:event="publication">2015-09-10</dc:date>
+
+    <!-- Language code: http://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
+    <dc:language>en</dc:language>
+
+    <meta name="cover" content="cover-image" />
+
+  </metadata>
+
+  <!-- MANIFEST (mandatory)
+       List of all the resources of the book (XHTML, CSS, images,…).
+       The order of item elements in the manifest is NOT significant.
+
+       http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.3 
+  -->
+
+  <manifest>
+    
+    <item href="Fonts/AlegreyaX-Regular.otf" id="fonts-alegreyax-regular-otf" media-type="application/vnd.ms-opentype" />
+    
+    <item href="Fonts/AlegreyaX-Bold.otf" id="fonts-alegreyax-bold-otf" media-type="application/vnd.ms-opentype" />
+    
+    <item href="Fonts/CinzelDecorative-Bold.otf" id="fonts-cinzeldecorative-bold-otf" media-type="application/vnd.ms-opentype" />
+    
+    <item href="Fonts/AlegreyaX-Italic.otf" id="fonts-alegreyax-italic-otf" media-type="application/vnd.ms-opentype" />
+    
+    <item href="Fonts/RosarivoX-Regular.otf" id="fonts-rosarivox-regular-otf" media-type="application/vnd.ms-opentype" />
+    
+    <item href="Styles/style-epub.css" id="styles-style-epub-css" media-type="text/css" />
+    
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+    
+    <item href="Text/cover.xhtml" id="chapter_cover" media-type="application/xhtml+xml" />
+    
+    <item href="Text/guhattaka.xhtml" id="chapter_u-enje-o-votlini" media-type="application/xhtml+xml" />
+    
+    <item href="Text/paramatthaka.xhtml" id="chapter_u-enje-o-univerzalnosti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/sporocilo.xhtml" id="chapter_sporo-ilo-a-hakavagge" media-type="application/xhtml+xml" />
+    
+    <item href="Text/sariputta.xhtml" id="chapter_u-enje-s-riputti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/kama.xhtml" id="chapter_u-enje-o-utnih-u-itkih" media-type="application/xhtml+xml" />
+    
+    <item href="Text/purabheda.xhtml" id="chapter_u-enje-o-pred-razpadom" media-type="application/xhtml+xml" />
+    
+    <item href="Text/toc.xhtml" id="chapter_contents" media-type="application/xhtml+xml" />
+    
+    <item href="Text/suddhatthaka.xhtml" id="chapter_u-enje-o-istosti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/copyright.xhtml" id="chapter_copyright" media-type="application/xhtml+xml" />
+    
+    <item href="Text/introduction.xhtml" id="chapter_spremna-beseda-prevajalca" media-type="application/xhtml+xml" />
+    
+    <item href="Text/culabyuha.xhtml" id="chapter_kratko-u-enje-o-slepi-ulici" media-type="application/xhtml+xml" />
+    
+    <item href="Text/pasura.xhtml" id="chapter_u-enje-pas-ri" media-type="application/xhtml+xml" />
+    
+    <item href="Text/titlepage.xhtml" id="chapter_title-page" media-type="application/xhtml+xml" />
+    
+    <item href="Text/zgodovina.xhtml" id="chapter_zgodovina-a-hakavagge" media-type="application/xhtml+xml" />
+    
+    <item href="Text/attadanda.xhtml" id="chapter_u-enje-o-nasilju" media-type="application/xhtml+xml" />
+    
+    <item href="Text/razlaga.xhtml" id="chapter_razlaga-nekaterih-izrazov" media-type="application/xhtml+xml" />
+    
+    <item href="Text/mahabyuha.xhtml" id="chapter_dalj-e-u-enje-o-slepi-ulici" media-type="application/xhtml+xml" />
+    
+    <item href="Text/dutthatthaka.xhtml" id="chapter_u-enje-o-nepo-tenosti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/kalahavivada.xhtml" id="chapter_u-enje-o-prepirih-in-sporih" media-type="application/xhtml+xml" />
+    
+    <item href="Text/tuvataka.xhtml" id="chapter_u-enje-o-hitrosti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/tissametteyya.xhtml" id="chapter_u-enje-tissu-matteyi" media-type="application/xhtml+xml" />
+    
+    <item href="Text/jara.xhtml" id="chapter_u-enje-o-starosti" media-type="application/xhtml+xml" />
+    
+    <item href="Text/magandiya.xhtml" id="chapter_u-enje-m-ga-iyi" media-type="application/xhtml+xml" />
+    
+    <item href="Images/cover.jpg" id="cover-image" media-type="image/jpeg" />
+    
+    <item href="Images/abm-pubs-logo_ebook.png" id="images-abm-pubs-logo-ebook-png" media-type="image/png" />
+    
+    <item href="Images/CCLogo.jpg" id="images-cclogo-jpg" media-type="image/jpeg" />
+    
+  </manifest>
+
+  <!-- SPINE (mandatory)
+
+       The spine element defines the default reading order of the content. It doesn't list every file in the manifest, 
+       just the reading order.
+
+       The value of the idref tag in the spine has to match the ID tag for that entry in the manifest.
+
+       For example, if you have the following reference in your manifest:
+
+          <item id="chapter-1" href="chapter01.xhtml" media-type="application/xhtml+xml" />
+
+       your spine entry would be:
+
+          <itemref idref="chapter-1" />
+
+       http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4
+
+       -->
+  <spine toc="ncx">
+    
+    <itemref idref="chapter_cover"  />
+    
+    <itemref idref="chapter_title-page"  />
+    
+    <itemref idref="chapter_contents"  />
+    
+    <itemref idref="chapter_spremna-beseda-prevajalca"  />
+    
+    <itemref idref="chapter_u-enje-o-utnih-u-itkih"  />
+    
+    <itemref idref="chapter_u-enje-o-votlini"  />
+    
+    <itemref idref="chapter_u-enje-o-nepo-tenosti"  />
+    
+    <itemref idref="chapter_u-enje-o-istosti"  />
+    
+    <itemref idref="chapter_u-enje-o-univerzalnosti"  />
+    
+    <itemref idref="chapter_u-enje-o-starosti"  />
+    
+    <itemref idref="chapter_u-enje-tissu-matteyi"  />
+    
+    <itemref idref="chapter_u-enje-pas-ri"  />
+    
+    <itemref idref="chapter_u-enje-m-ga-iyi"  />
+    
+    <itemref idref="chapter_u-enje-o-pred-razpadom"  />
+    
+    <itemref idref="chapter_u-enje-o-prepirih-in-sporih"  />
+    
+    <itemref idref="chapter_kratko-u-enje-o-slepi-ulici"  />
+    
+    <itemref idref="chapter_dalj-e-u-enje-o-slepi-ulici"  />
+    
+    <itemref idref="chapter_u-enje-o-hitrosti"  />
+    
+    <itemref idref="chapter_u-enje-o-nasilju"  />
+    
+    <itemref idref="chapter_u-enje-s-riputti"  />
+    
+    <itemref idref="chapter_zgodovina-a-hakavagge"  />
+    
+    <itemref idref="chapter_razlaga-nekaterih-izrazov"  />
+    
+    <itemref idref="chapter_sporo-ilo-a-hakavagge"  />
+    
+    <itemref idref="chapter_copyright"  />
+    
+  </spine>
+
+  <!-- GUIDE (optional, recommended by Apple)
+
+        The guide lets you specify the role of the book's files.
+
+        Available tags: cover, title-page, toc, index, glossary, acknowledgements, bibliography,
+        colophon, copyright-page, dedication, epigraph, foreword, loi (list of illustrations),
+        lot (list of tables), notes, preface, and text.
+
+        http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.6
+
+       -->
+  <guide>
+    
+    <reference href="Text/cover.xhtml" title="Cover" type="cover" />
+    
+    <reference href="Text/titlepage.xhtml" title="Title Page" type="title-page" />
+    
+    <reference href="Text/toc.xhtml" title="Contents" type="toc" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <reference href="Text/copyright.xhtml" title="Copyright" type="copyright-page" />
+    
+  </guide>
+
+</package>

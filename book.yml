@@ -3,41 +3,17 @@
 # ==============
 
 title: "Atthakavagga"
-author: "The Author"
+author: "Bhikkhu Hiriko"
+file_as: Hiriko, Bhikkhu
 date: 2014-11-27
-
-toc:
-  - { the_matter: frontmatter }
-  - { insert: '\frontmatter', target: latex }
-  - { title: "Cover", src: 'cover.xhtml.erb', target: epub, layout: none, type: cover, linear: no }
-  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: epub, type: title-page }
-  - { title: "Contents", src: 'toc.xhtml.erb', target: epub, type: toc }
-  - { insert: "\\cleartorecto\n\\tableofcontents", target: latex }
-  - preface.tex
-  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: mobi, type: text, class: title-page }
-  - { title: "Contents", src: 'toc.xhtml.erb', target: mobi, type: toc }
-  - { the_matter: mainmatter, section_number: 1 }
-  - { insert: "\\mainmatter\n\\book{\\thetitle}", target: latex }
-  - kama.tex
-  - guhattaka.tex
-  - { insert: '\appendix', target: latex }
-  - { section_name: "Appendix", section_number: 1 }
-  - further-comments.markdown
-  - { the_matter: backmatter }
-  - { insert: '\backmatter', target: latex }
-  - glossary.tex
 
 cover_image: "cover.jpg"
 
 exclude_assets: [ "cover.xcf", ]
 
-# Either an ISBN or an UUID to identify the book.
-# If you don't have an ISBN, generate an UUID:
-# http://www.famkruithof.net/uuid/uuidgen
-
 isbn: "978-1-78432-036-2"
-publisher: "The Publisher"
-publisher_atag: "<a href='http://thepublisher.org/' target='_blank'>www.thepublisher.org</a>"
-publisher_logo: "publisher-logo.jpg"
-book_atag: "<a href='http://thepublisher.org/thebookurl/' target='_blank'>www.thepublisher.org/thebookurl</a>"
+publisher: "Amaravati Publications"
+publisher_atag: "<a href='http://fsbooks.org/'>www.fsbooks.org</a>"
+publisher_logo: "abm-pubs-logo_ebook.png"
+book_atag: "<a href='http://fsbooks.org/'>www.fsbooks.org</a>"
 

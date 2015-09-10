@@ -7,7 +7,7 @@
     <title>Cover</title>
     <style type="text/css">
       /*<![CDATA[*/
-      <% unless book.output_format == 'mobi' %>img { max-width: 100%; }<% end %>
+      img { max-width: 100%; }
       body { oeb-column-number: 1; }
       #cover-image { text-align: center; }
       /*]]>*/
@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="cover-image">
-      <img alt="<%= book.title %>" src="../Images/<%= book.cover_image %>" />
+      <img alt="Atthakavagga" src="../Images/cover.jpg" />
     </div>
   </body>
 </html>

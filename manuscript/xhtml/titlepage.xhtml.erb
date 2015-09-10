@@ -1,7 +1,7 @@
 
 <h1><%= book.title %></h1>
-<% unless book.subtitle.nil? %><h2><%= book.subtitle %></h2><% end %>
-<h3>by <%= book.author %></h3>
+<h2>zbirka osemverznih sutt</h2>
+<h3>Prevod: <%= book.author %></h3>
 
 <div class="title-page-rule"></div>
 
@@ -20,7 +20,7 @@
       </td>
       <td>
         <% unless book.publisher_logo.nil? %>
-        <div class="publisher-logo"><img src="../images/<%= book.publisher_logo %>" alt="logo"/></div>
+        <div class="publisher-logo"><img src="../Images/<%= book.publisher_logo %>" alt="logo"/></div>
         <% end %>
       </td>
     </tr>

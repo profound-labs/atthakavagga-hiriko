@@ -1,26 +1,53 @@
 
+date: 2015-09-10
+version: 'v1.0'
+
 # Epub and Mobi
 # =============
 
-bookid: "ProphecyBookId"
+bookid: "AtthakavaggaBhikkhuHirikoBookId"
 
 # ISBN for the ebook editions
-isbn: "000-0-000000-00-0"
+isbn: "978-1-78432-037-9"
 
-# BISAC Subject Headings List:
-# http://www.bisg.org/what-we-do-0-136-bisac-subject-headings-list-major-subjects.php
+# Using space will number the sections without a section name.
+section_names: [ " ", "", "" ]
 
-#subject: LIST / OF / SUBJECTS
-#source: http://www.source.org/
+toc:
+  - { the_matter: frontmatter }
+  - { title: "Cover", src: 'cover.xhtml.erb', target: epub, layout: none, type: cover, linear: no }
+  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: epub, type: title-page }
+  - { title: "Contents", src: 'toc.xhtml.erb', target: epub, type: toc }
+  - introduction.md
+  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: mobi, type: text, class: title-page }
+  - { title: "Contents", src: 'toc.xhtml.erb', target: mobi, type: toc }
+  - { the_matter: mainmatter, section_number: 1 }
+  - kama.md
+  - guhattaka.md
+  - dutthatthaka.md
+  - suddhatthaka.md
+  - paramatthaka.md
+  - jara.md
+  - tissametteyya.md
+  - pasura.md
+  - magandiya.md
+  - purabheda.md
+  - kalahavivada.md
+  - culabyuha.md
+  - mahabyuha.md
+  - tuvataka.md
+  - attadanda.md
+  - sariputta.md
+  - { the_matter: backmatter }
+  - zgodovina.md
+  - razlaga.md
+  - sporocilo.md
+  - { title: "Copyright", src: 'copyright.md.erb', type: copyright-page, target: [ epub, mobi ] }
 
-# MARC Code List for Relators:
-# Editor [edt], Cover designer [cov], Translator [trl],
-# Book designer [bkd]
-# http://www.loc.gov/marc/relators/relaterm.html
+subject: RELIGION / Buddhism / Theravada
+source: http://www.fsbooks.org/
 
-#contributors:
-#  - edt: Lastname, Name
-#  - edt: Other Lastname, Name
-#  - cov: Lastname, Name
-#  - trl: Lastname, Name
+contributors:
+  - trl: Hiriko, Bhikkhu
+  - bkd: Gambhiro, Bhikkhu
 

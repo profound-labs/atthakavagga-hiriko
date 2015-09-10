@@ -1,0 +1,11 @@
+
+.font-cinzel {
+    font-family: 'Cinzel';
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../Fonts/CinzelDecorative-Bold.otf') format('opentype');
+    font-weight: normal; // don't map it to bold to avoid extra weight in some devices
+    font-style: normal;
+}
