@@ -2,9 +2,10 @@
 *.aux
 *.log
 *.toc
+build/latex/auto
+manuscript/tex/auto
 publish/epub
 publish/mobi
 publish/pdf
 publish/preview
-build/latex/auto
 build/latex/book_main.pdf
