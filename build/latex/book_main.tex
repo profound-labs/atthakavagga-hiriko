@@ -2,6 +2,7 @@
   final,
   pagePreset=tallpage,
   babelLanguage=slovene,
+  webversion,
 ]{anecdote}
 
 \usepackage{mylayout}
@@ -26,8 +27,16 @@
 
 \begin{document}
 
+\ifwebversion
+\webcover{%
+\includegraphics[height=\paperheight]{./webcover.pdf}%
+}
+\fi
+
 \frontmatter
 
+\cleartorecto
+\setcounter{page}{1}
 \input{../../manuscript/tex/titlepage.tex}
 
 \input{../../manuscript/tex/copyright.tex}
