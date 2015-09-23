@@ -353,3 +353,8 @@ h1, h2 {
 .verseref {
   padding-right: 5px;
 }
+
+/* line 33, ../sass/_booktheme.sass */
+dt {
+  font-weight: bold;
+}

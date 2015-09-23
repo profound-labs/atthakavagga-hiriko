@@ -15,12 +15,12 @@ section_names: [ " ", "", "" ]
 
 toc:
   - { the_matter: frontmatter }
-  - { title: "Cover", src: 'cover.xhtml.erb', target: epub, layout: none, type: cover, linear: no }
-  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: epub, type: title-page }
-  - { title: "Contents", src: 'toc.xhtml.erb', target: epub, type: toc }
+  - { title: "Pokrov", src: 'cover.xhtml.erb', target: epub, layout: none, type: cover, linear: no }
+  - { title: "Naslovnica", src: 'titlepage.xhtml.erb', target: epub, type: title-page }
+  - { title: "Kazalo", src: 'toc.xhtml.erb', target: epub, type: toc }
   - introduction.md
-  - { title: "Title Page", src: 'titlepage.xhtml.erb', target: mobi, type: text, class: title-page }
-  - { title: "Contents", src: 'toc.xhtml.erb', target: mobi, type: toc }
+  - { title: "Naslovnica", src: 'titlepage.xhtml.erb', target: mobi, type: text, class: title-page }
+  - { title: "Kazalo", src: 'toc.xhtml.erb', target: mobi, type: toc }
   - { the_matter: mainmatter, section_number: 1 }
   - kama.md
   - guhattaka.md

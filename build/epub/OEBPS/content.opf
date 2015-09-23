@@ -86,7 +86,7 @@
     
     <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
     
-    <item href="Text/cover.xhtml" id="chapter_cover" media-type="application/xhtml+xml" />
+    <item href="Text/cover.xhtml" id="chapter_pokrov" media-type="application/xhtml+xml" />
     
     <item href="Text/guhattaka.xhtml" id="chapter_u-enje-o-votlini" media-type="application/xhtml+xml" />
     
@@ -100,7 +100,7 @@
     
     <item href="Text/purabheda.xhtml" id="chapter_u-enje-o-pred-razpadom" media-type="application/xhtml+xml" />
     
-    <item href="Text/toc.xhtml" id="chapter_contents" media-type="application/xhtml+xml" />
+    <item href="Text/toc.xhtml" id="chapter_kazalo" media-type="application/xhtml+xml" />
     
     <item href="Text/suddhatthaka.xhtml" id="chapter_u-enje-o-istosti" media-type="application/xhtml+xml" />
     
@@ -112,7 +112,7 @@
     
     <item href="Text/pasura.xhtml" id="chapter_u-enje-pas-ri" media-type="application/xhtml+xml" />
     
-    <item href="Text/titlepage.xhtml" id="chapter_title-page" media-type="application/xhtml+xml" />
+    <item href="Text/titlepage.xhtml" id="chapter_naslovnica" media-type="application/xhtml+xml" />
     
     <item href="Text/zgodovina.xhtml" id="chapter_zgodovina-a-hakavagge" media-type="application/xhtml+xml" />
     
@@ -162,11 +162,11 @@
        -->
   <spine toc="ncx">
     
-    <itemref idref="chapter_cover"  />
+    <itemref idref="chapter_pokrov"  />
     
-    <itemref idref="chapter_title-page"  />
+    <itemref idref="chapter_naslovnica"  />
     
-    <itemref idref="chapter_contents"  />
+    <itemref idref="chapter_kazalo"  />
     
     <itemref idref="chapter_spremna-beseda-prevajalca"  />
     
@@ -225,11 +225,11 @@
        -->
   <guide>
     
-    <reference href="Text/cover.xhtml" title="Cover" type="cover" />
+    <reference href="Text/cover.xhtml" title="Pokrov" type="cover" />
     
-    <reference href="Text/titlepage.xhtml" title="Title Page" type="title-page" />
+    <reference href="Text/titlepage.xhtml" title="Naslovnica" type="title-page" />
     
-    <reference href="Text/toc.xhtml" title="Contents" type="toc" />
+    <reference href="Text/toc.xhtml" title="Kazalo" type="toc" />
     
     
     
