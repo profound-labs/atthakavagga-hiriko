@@ -5,7 +5,7 @@ Aṭṭhakavagga
 Translation to Slovenian by Bhikkhu Hiriko
 
 Paperback status: **COMPLETED**  
-Ebook status: **N/A**
+Ebook status: **COMPLETED**
 
 First edition
 
