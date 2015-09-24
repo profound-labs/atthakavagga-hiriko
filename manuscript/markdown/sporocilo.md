@@ -91,7 +91,7 @@ odpora, čutnosti in nevednosti in je zatorej odgovoren za svoja dejanja.
 Osvobojeni človek, ki nima več odpora, čutnosti ali nevednosti, ne
 škoduje niti sebi niti drugim.
 
-[silabbata] Častiti Soṅa je rekel, da je moralno vedenje razsvetljenega
+Častiti Soṅa je rekel, da je moralno vedenje razsvetljenega
 človeka (*arahat*) naravno izražanje osvobojenega uma. Ta človek ni
 nepokvarjen zaradi slepega sledenja ritualom, zapovedi ali kakršenkoli
 moralni etiki (*silabbataparāmāsa*), ampak je odločen v nepokvarjenosti
