@@ -5,15 +5,13 @@
 title: "Atthakavagga"
 author: "Bhikkhu Hiriko"
 file_as: Hiriko, Bhikkhu
-date: 2014-11-27
+date: 2021-04-08
 
 cover_image: "cover.jpg"
 
 exclude_assets: [ "cover.xcf", ]
 
-isbn: "978-1-78432-036-2"
-publisher: "Amaravati Publications"
-publisher_atag: "<a href='http://fsbooks.org/'>www.fsbooks.org</a>"
-publisher_logo: "abm-pubs-logo_ebook.png"
-book_atag: "<a href='http://fsbooks.org/'>www.fsbooks.org</a>"
+isbn: ""
+publisher: "Samanadipa"
+publisher_atag: "<a href='http://www.slo-theravada.org'>www.slo-theravada.org</a>"
 

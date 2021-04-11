@@ -77,7 +77,7 @@
 
 % === Define colors ===
 
-\definecolor{textbody}{gray}{0.15}
+\definecolor{textbody}{gray}{0.05}
 \definecolor{footnoterule}{gray}{0.5}
 \definecolor{chapternum}{gray}{0.8}
 \definecolor{chaptertitle}{gray}{0.3}
@@ -198,6 +198,7 @@
 \hypersetup{
   unicode=true,
   colorlinks=true,
+  hypertexnames=false,
   linkcolor=link,
   citecolor=link,
   filecolor=link,

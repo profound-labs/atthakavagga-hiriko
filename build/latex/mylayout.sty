@@ -2,11 +2,12 @@
 
 \graphicspath{{../../assets/Images/}}
 
-\definecolor{chapternum}{gray}{0.3}
-\definecolor{appendixchapternum}{gray}{0.8}
-\definecolor{chaptertitle}{gray}{0.3}
-\definecolor{section}{gray}{0.3}
-\definecolor{subsection}{gray}{0.4}
+\definecolor{chapternum}{gray}{0.2}
+\definecolor{appendixchapternum}{gray}{0.6}
+\definecolor{chaptertitle}{gray}{0.2}
+\definecolor{chaptersubtitle}{gray}{0.3}
+\definecolor{section}{gray}{0.2}
+\definecolor{subsection}{gray}{0.3}
 \definecolor{desclabel}{gray}{0.2}
 
 \maxtocdepth{chapter}
@@ -22,11 +23,12 @@
     \global\@topnum\z@
   \fi
   \m@mindentafterchapter
+  % NOTE: No longer alternating Pali and Slovenian chapters.
   \@ifstar{%
-    \addtocounter{chapter}{1}%
+    %\addtocounter{chapter}{1}%
     \@m@mschapter%
   }{%
-    \addtocounter{chapter}{-1}%
+    %\addtocounter{chapter}{-1}%
     \@m@mchapter%
   }%
 }
@@ -74,7 +76,7 @@
   \chapterstyle{default}
   \setlength{\beforechapskip}{-11.5mm}
   \setlength{\midchapskip}{0pt}
-  \setlength{\afterchapskip}{2.5\onelineskip}
+  \setlength{\afterchapskip}{0.5\onelineskip}
   \renewcommand\printchaptername{}
   \renewcommand\printchapternum{}
   \renewcommand\printchapternonum{}
@@ -108,6 +110,9 @@
         \centering\chapterNumberFont\chapterNumberSize\color{chapternum}%
         \thechapter%
       \end{minipage}};
+    \node (subtitle) [
+      below=18pt of rulebox.mid, anchor=north,
+      ] {\AlegreyaFont\fontsize{11}{11}\selectfont\color{chaptersubtitle} \emph{\theChapterNote}};
     \end{tikzpicture}%
   }
 }

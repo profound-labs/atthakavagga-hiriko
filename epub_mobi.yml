@@ -1,6 +1,6 @@
 
-date: 2015-09-10
-version: 'v1.0'
+date: 2021-04-08
+version: 'v2.0'
 
 # Epub and Mobi
 # =============
@@ -8,7 +8,7 @@ version: 'v1.0'
 bookid: "AtthakavaggaBhikkhuHirikoBookId"
 
 # ISBN for the ebook editions
-isbn: "978-1-78432-037-9"
+isbn: ""
 
 # Using space will number the sections without a section name.
 section_names: [ " ", "", "" ]
@@ -45,7 +45,7 @@ toc:
   - { title: "Copyright", src: 'copyright.md.erb', type: copyright-page, target: [ epub, mobi ] }
 
 subject: RELIGION / Buddhism / Theravada
-source: http://www.fsbooks.org/
+source: https://slo-theravada.org
 
 contributors:
   - trl: Hiriko, Bhikkhu
